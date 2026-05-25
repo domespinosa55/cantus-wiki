@@ -33,12 +33,24 @@
 
 ### Prospecting (v2.0)
 
-*Operational scoring system under the Cantus Markets vertical. Supersedes Box v0.1 Tenant + Supply Chain + Partner frameworks.*
+*Operational scoring system under the Cantus Markets vertical. Supersedes Box v0.1 Tenant + Supply Chain + Partner frameworks. Operates autonomously via scheduled agents writing to Notion-backed prospect tracker; founder review via Slack + Notion + Cowork dashboard.*
 
 | Page | Type | Audience | Updated |
 |------|------|----------|---------|
 | [[Strategy/Prospecting/Cantus-Prospecting-Framework]] | framework | capital_partner | 2026-05-24 |
 | [[Strategy/Prospecting/Cantus-Prospecting-Playbook]] | strategy | capital_partner | 2026-05-24 |
+| [[Strategy/Prospecting/Cantus-Prospecting-System]] | strategy | capital_partner | 2026-05-24 |
+
+**External system components (outside wiki):**
+
+| Component | Location | Cadence |
+|---|---|---|
+| Cantus Prospect Tracker (Notion DB) | https://www.notion.so/37b03a555d824c8c8dc374892f25df47 | Live; updated by daily signal scan |
+| Cantus Live Prospect Dashboard (Cowork artifact) | id: cantus-prospect-dashboard | Refreshes from Notion on each open |
+| Daily Signal Scan (scheduled Claude agent) | id: cantus-daily-signal-scan | 05:00 CT daily |
+| Weekly Signal Digest (scheduled Claude agent) | id: cantus-weekly-signal-digest | 07:00 CT Mondays |
+| Monthly Full Re-Score (scheduled Claude agent) | id: cantus-monthly-rescore | 07:00 CT 1st of month |
+| Quarterly Calibration Memo (scheduled Claude agent) | id: cantus-quarterly-calibration | 12:00 CT 1st of Jan/Apr/Jul/Oct |
 
 ### Strategy memos and primary inputs
 

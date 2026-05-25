@@ -6,6 +6,44 @@
 
 ---
 
+## [2026-05-24] add | Autonomous prospecting system — Notion database, scheduled agents, Cowork dashboard
+
+**Source:** Dom direction to operationalize the v2.0 Prospecting Framework + Playbook into a running autonomous system that updates a database and produces reports for review. Four locked-in design decisions: Notion as the database; Tier A across all six vectors ERCOT-focused as initial scope (~40-60 firms); reports via Slack daily/weekly + Notion monthly + wiki quarterly; agent scores autonomously with founder review monthly and on tier shifts ≥0.5.
+
+**Action:**
+- **Created** `Strategy/Prospecting/Cantus-Prospecting-System.md` (~3,500 words) — the operating-system documentation. Five-layer architecture (Signal Ingestion / Prospect Database / Agent Layer / Scoring Engine / Report Layer) each mapped to existing v2 components (CII data assets, DealOS agent layer, CII Tenant match loop, CII product surfaces). Autonomous operating loop (daily/weekly/monthly/quarterly cadence). Notion database schema spec. Scheduled task specs. Slack delivery configuration. Human-in-the-loop checkpoints. Calibration and maintenance cycle.
+- **Created** the Cantus Prospect Tracker Notion database at https://www.notion.so/37b03a555d824c8c8dc374892f25df47 (data source d7ac78ec-8def-4d7d-9f2a-ba94461f33f5). 30 properties spanning firm metadata, four scoring dimensions, two multipliers, composite score, tier, MW estimate, pipeline-site match, engagement status, source URLs, constraint flags, signal context, founder notes, relationship path, scoring dates.
+- **Seeded** 51 Tier A ERCOT-focused prospects across all six demand vectors:
+  - Compute (10): OpenAI, Anthropic, Meta, xAI, Oracle, Microsoft, AWS, Google Cloud, CoreWeave, Crusoe
+  - Supply Chain Mfg (12): LG Energy Solution, Samsung SDI, SK On, Panasonic, Celestica (ACTIVE — Site visit stage), Jabil, Foxconn (long-standing — Initial outreach), Flex, Quanta, Wiwynn, Supermicro, Vertiv
+  - Advanced Mfg (8): Samsung Taylor, TSMC US, Intel Foundry, Micron, GlobalFoundries, Wolfspeed, Texas Instruments, Apple Silicon
+  - Defense IB (9): Anduril, Lockheed Martin, RTX, Northrop Grumman, General Dynamics, HII, Shield AI, Saronic, Hadrian
+  - Bio/Critical Materials (10): Eli Lilly, Merck, Lonza, Catalent (B), Resilience, MP Materials, Albemarle, Arcadium, IperionX, USA Rare Earth (B)
+  - Energy Transition Mfg (8): Tesla (ACTIVE — Term sheet stage; multi-vector anchor), T1 Energy (ACTIVE — Site visit stage), First Solar, Plug Power, Air Products, Linde, Bloom Energy, 1PointFive
+- **Created** four scheduled Claude agent tasks via mcp__scheduled-tasks__create_scheduled_task:
+  - `cantus-daily-signal-scan` — 05:00 CT daily. Scans federal databases, SEC EDGAR, ERCOT registrations, NVIDIA news, top trade press for new signals on Tier A/B prospects. Updates Notion records. Flags tier shifts ≥0.5 to Slack.
+  - `cantus-weekly-signal-digest` — 07:00 CT Mondays. Compiles 7-day signal activity into structured digest. Posts to Slack channel #cantus-prospecting (or founder DM) + creates Notion page.
+  - `cantus-monthly-rescore` — 07:00 CT 1st of month. Full re-score of Tier A/B roster against v2.0 Framework. Produces Monthly Operating Review. Notion page + Slack summary.
+  - `cantus-quarterly-calibration` — 12:00 CT 1st of Jan/Apr/Jul/Oct. Drafts Quarterly Calibration Memo committed to wiki under Strategy/Prospecting/Quarterly-Calibration-YYYY-QN.md. Founder reviews, signs, pushes to GitHub.
+- **Created** Cowork artifact `cantus-prospect-dashboard` — live HTML dashboard that pulls fresh data from Notion on each open. Sections: Tier distribution + vector breakdown charts (Chart.js); calibration anchors (Tesla + Celestica); multi-vector anchors highlight; sortable Tier A roster table (Grid.js); active pipeline site matching; recent scoring activity feed.
+- **Updated** `index.md` — Prospecting section now lists the System doc and references the external components (Notion DB, dashboard, four scheduled agents) with cadence.
+
+**Cross-links added:** System doc cross-references all v2 architecture pages (Foundation: CII/DealOS; vertical: Cantus Markets; CII Iteration Document; DealOS spec; Framework and Playbook). Scheduled-task prompts reference the wiki paths so each run is self-contained.
+
+**Audience:** internal (system documentation); capital_partner (calibration memo output, monthly review output where appropriate).
+
+**Notes:**
+- The Notion database was created without formulas due to a "Type error with formula" validation issue in the SQL DDL formula parser. As workaround, the four computed fields (Base Composite, Multi-Vector Multiplier, Vertical-Integration Multiplier, Composite Score) and the Tier select are populated by the agents during scoring — this is operationally equivalent to formulas and arguably more flexible.
+- Each scheduled task's prompt is fully self-contained (each run starts fresh with no session memory), including wiki paths, Notion database ID, scoring rubric reference, and output format specification.
+- Tesla and Celestica are explicitly seeded as calibration anchors per the v2.0 Framework §VI. Tesla scoring under 4 vectors with Aggressive 4+ trajectory at Composite 7.96 (capped Tier A++ for display). Celestica at Composite 4.96 with 300+ MW per active engagement; MW heuristic updated upward 3-6x from v0.1 due to NVIDIA roadmap power-density compression.
+- The active Cantus engagements visible in the database: Tesla (Term sheet stage, 800-1500 MW solar vertical integration), Celestica (Site visit stage, 300+ MW AI server assembly + burn-in), T1 Energy (Site visit stage, 200-300 MW solar manufacturing at G1 Dallas), Foxconn (Initial outreach, long-standing relationship).
+- NVIDIA is flagged in the system as the most strategically consequential Machine OEM relationship for Cantus and a priority gap in [[_parameters]] Strategic OEM Relationships — to be elevated to Cantus Technology corporate-relationship priority.
+- Dashboard is built with Chart.js + Grid.js per Cowork artifact CDN allowlist. Brand palette (navy 1A2B3C, rust B5532A, gold C9A961, stone 6B6B6B) and Georgia typography per Dom's stated preferences.
+- Open items: Slack channel #cantus-prospecting may not exist yet; first weekly digest will check and fall back to founder DM. Quarterly calibration memo drafts are committed locally to the wiki working tree but not auto-pushed to GitHub — founder reviews and pushes.
+- No NPI material crossed. Cantus Forge not referenced. Hopkins not signed; author of record Dom Espinosa throughout.
+
+**Author:** Dom Espinosa
+
 ## [2026-05-24] add | Cantus Prospecting Framework v2.0 + Playbook v2.0
 
 **Source:** Dom direction after review of five legacy prospecting documents in Box (cantus_taxonomy_memo.docx, cantus_tenant_targeting_framework.docx v0.1, cantus_supply_chain_framework.docx v0.1, cantus_supply_chain_playbook.docx, cantus_partner_framework_v1.docx). Box docs are the operational prospecting layer from prior Claude Chat sessions before Cowork migration. They have strong operational scoring discipline (4-dimension rubrics with weights, 0–5 scoring, A/B/C/D tier bands, MW translation heuristics, sourcing playbook) but were organized around three tenant archetypes (Enterprise DC / Advanced Manufacturing / Supply Chain) that predate the v2 framework's six-demand-vector taxonomy. Dom's current Cantus engagements (Tesla solar vertical integration at gigawatt scale; Celestica AI server assembly + burn-in at 300+ MW) stress-test the v0.1 framework — Tesla's multi-vector exposure was missed entirely under v0.1; Celestica's MW estimate was understated 3–6x due to power-density compression from the NVIDIA roadmap.
