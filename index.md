@@ -31,6 +31,15 @@
 | [[Strategy/Foundations/Labor-Community-Foundation]] | Labor / Community | All four verticals | 2026-05-24 |
 | [[Strategy/Foundations/CII-DealOS-Foundation]] | CII / DealOS | All four verticals | 2026-05-24 |
 
+### Prospecting (v2.0)
+
+*Operational scoring system under the Cantus Markets vertical. Supersedes Box v0.1 Tenant + Supply Chain + Partner frameworks.*
+
+| Page | Type | Audience | Updated |
+|------|------|----------|---------|
+| [[Strategy/Prospecting/Cantus-Prospecting-Framework]] | framework | capital_partner | 2026-05-24 |
+| [[Strategy/Prospecting/Cantus-Prospecting-Playbook]] | strategy | capital_partner | 2026-05-24 |
+
 ### Strategy memos and primary inputs
 
 | Page | Type | Area | Audience | Updated |
