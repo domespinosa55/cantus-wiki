@@ -6,6 +6,18 @@
 
 ---
 
+## [2026-06-01] digest | Weekly Signal Digest — Week of 2026-06-01
+
+Automated Weekly Signal Digest run (Cantus Prospecting System Task 2). Window 2026-05-25 → 2026-06-01, parsed from the Notion Cantus Prospect Tracker (60 records).
+
+**Findings:** No tier-band crossings. Two within-Tier-A composite re-scores — OpenAI 5.55 → 6.16 (NVIDIA ≥10 GW / up to $100B LOI) and GlobalFoundries 4.07 → 4.28 ($375M CHIPS quantum-foundry LOI). Three new prospects: Applied Digital (Compute, Tier A, 700 MW), Corning (Supply Chain Mfg, Tier B), Longwell (Supply Chain Mfg, Tier B). No engagement-status progressions; Tesla remains the only active commercial motion (Term sheet).
+
+**Delivery:** Slack draft to Dom's DM (no `#cantus-prospecting` channel exists yet — channel choice still open per Prospecting System §XIII). Notion mirror page "Weekly Signal Digest 2026-06-01" created (https://www.notion.so/3725d9006c2681779669c4303a672cc9).
+
+**Flags for maintenance:** (1) roster is 56/60 Tier A with no C/D — banding under-discriminating, calibration review warranted; (2) Notion export exposes no creation timestamp, so new-prospect detection relies on Founder Notes provenance text.
+
+**Author:** Dom Espinosa
+
 ## [2026-05-24] add | Autonomous prospecting system — Notion database, scheduled agents, Cowork dashboard
 
 **Source:** Dom direction to operationalize the v2.0 Prospecting Framework + Playbook into a running autonomous system that updates a database and produces reports for review. Four locked-in design decisions: Notion as the database; Tier A across all six vectors ERCOT-focused as initial scope (~40-60 firms); reports via Slack daily/weekly + Notion monthly + wiki quarterly; agent scores autonomously with founder review monthly and on tier shifts ≥0.5.
