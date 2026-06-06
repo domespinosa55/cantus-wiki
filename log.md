@@ -6,6 +6,28 @@
 
 ---
 
+## [2026-06-06] ingest | Execution model, Batch Zero playbook, partner architecture, NPI boundary, onboarding Module 1
+
+**Source:** Cowork session 2026-06-05/06 — six working-file documents authored in `~/Documents/Cantus/Cantus/Execution-Model/` and `Onboarding/`; markdown sources archived post-ingest to `Cantus/Archive/ingested-to-wiki-2026-06-06/` (copy-then-archive). Binary working files stay in place: execution-model xlsx in `Execution-Model/`, branded docx in `Deliverables/`.
+
+**Action:** Created six pages:
+- `[[Strategy/Cantus-Execution-Operating-Model]]` — the seat/RACI operating model generalized from a manufacturing execution RACI; three Cantus seat postures (Orchestrator / Power & Commercial Prime / Integrated Developer-Principal) mapped to the identity arc; back-end-PPA monetization with the equipment-slot + site-control lock. Working file: `Cantus-Execution-Operating-Model-v0.1.xlsx` (4 tabs).
+- `[[Strategy/Batch-Zero-Power-Strategy-Playbook]]` — reusable ERCOT Batch Zero engagement (PGRR145 / SB6 / §25.194, figures DRAFT): Base-vs-Studied + Firm/PCLR/WLPUN decision tree, the one-number (firm allocation) framing, named execution team with Cantus seats, dated workplan to July 10, 2026, Singleton / Gibbons Creek worked example.
+- `[[Partners/Execution-Partners-Registry]]` — first Partners page. Greenflash (battery/PCLR, Build-Transfer-Operate guardrail), Thunderhead (WLPUN funded IPP), Turbine-X (turbine packages + CCGT leg), Splight (load studies + 2–3x capacity unlock); combined-stack view, open seats, diligence tracker. Web-sourced facts marked unverified.
+- `[[Strategy/Cantus-NPI-Boundary]]` — principal-vs-agent split, why two entities (conflict management, native economics, origination flywheel), shared-vocabulary boundary rules, firewall lines.
+- `[[Strategy/Cantus-Integrated-Campus-Power-Program]]` — one platform / both phases / one PPA: bridge WLPUN → battery PCLR → permanent CCGT with conditioned off-ramp (right to re-point); the fleet-ownership fork (orchestrate now / JV / own at Studio phase); Private Use Network campus; stacked revenue model. Mirrored as Cantus-branded docx in `Deliverables/`.
+- `[[Onboarding/Module-1-The-Cantus-Overview]]` — firm onboarding Module 1, the shared story told from the principal posture (six forces, integration bottleneck, ERCOT, rules of the road, v2 architecture, glossary, quiz).
+
+Updated `index.md`: new "Execution model and partner architecture" Strategy subsection, Partners table (first entry), Onboarding section, Deliverables row, footer note.
+
+**Cross-links added:** All six pages interlinked; anchored to `[[Strategy/Cantus-Power-Sector-Thesis]]`, the four vertical pages, `[[Strategy/Bridge-to-Grid-Thesis]]`, and `[[Strategy/ERCOT-Positioning-Thesis]]`.
+
+**Sensitivity:** internal (registry and playbook contain unverified public-source partner facts and DRAFT regulatory figures; integrated-campus page is capital-partner-readable).
+
+**Notes:** Firewall verified across all six pages — no NPI internal scoring, schema, or client material; NPI referenced only at business-model level in the boundary page. All Batch Zero rule figures marked DRAFT pending regulatory approval. Named partner firms are illustrative, not endorsements.
+
+**Author:** Dom Espinosa
+
 ## [2026-06-01] digest | Weekly Signal Digest — Week of 2026-06-01
 
 Automated Weekly Signal Digest run (Cantus Prospecting System Task 2). Window 2026-05-25 → 2026-06-01, parsed from the Notion Cantus Prospect Tracker (60 records).

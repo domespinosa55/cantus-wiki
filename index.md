@@ -63,6 +63,17 @@
 | [[Strategy/Primary-Inputs-02-Energy-Execution]] | strategy | energy | capital_partner | 2026-05-04 |
 | [[Strategy/Primary-Inputs-03-Labor-Community]] | strategy | labor | capital_partner | 2026-05-04 |
 
+### Execution model and partner architecture (added 2026-06-06)
+
+*How Cantus executes: the seat/RACI operating model, the ERCOT Batch Zero playbook, the integrated campus power program (one PPA, bridge → BESS → CCGT), and the Cantus–NPI boundary. Working files (execution-model xlsx, branded docx) referenced via `working_files:` frontmatter.*
+
+| Page | Type | Audience | Updated |
+|------|------|----------|---------|
+| [[Strategy/Cantus-Execution-Operating-Model]] | strategy | internal | 2026-06-06 |
+| [[Strategy/Batch-Zero-Power-Strategy-Playbook]] | playbook | capital_partner | 2026-06-06 |
+| [[Strategy/Cantus-Integrated-Campus-Power-Program]] | strategy | capital_partner | 2026-06-06 |
+| [[Strategy/Cantus-NPI-Boundary]] | positioning | capital_partner | 2026-06-06 |
+
 ### Archived (v1, superseded by v2)
 
 | Page | Status | Superseded by |
@@ -133,7 +144,11 @@
 
 ## Partners
 
-*No partner pages migrated in Phase 4. Populate Tier-1 co-development partners (Hillwood, Crow, Howard Hughes, Majestic per `_README.md`) as engagements form.*
+| Page | Type | Scope | Updated |
+|------|------|-------|---------|
+| [[Partners/Execution-Partners-Registry]] | registry | Execution partners for Cantus developments — Greenflash (battery/PCLR), Thunderhead + Turbine-X (generation/WLPUN), Splight (interconnection intelligence); seat map, engagement guardrails, diligence | 2026-06-06 |
+
+*Tier-1 co-development partner pages (Hillwood, Crow, Howard Hughes, Majestic per `_README.md`) still to populate as engagements form.*
 
 ## Intelligence
 
@@ -154,6 +169,14 @@
 | [[Workshop/Active/Hopkins-Performance-Tuning]] | active | medium | 2026-05-04 | 2026-05-04 |
 | [[Workshop/Active/Unified-AI-Native-Knowledge-Platform]] | active | someday | 2026-05-04 | 2026-05-04 |
 
+## Onboarding
+
+| Page | Module | Audience | Updated |
+|------|--------|----------|---------|
+| [[Onboarding/Module-1-The-Cantus-Overview]] | 1 — The Cantus Overview (the shared story: six forces, integration bottleneck, principal posture, v2 architecture) | internal | 2026-06-06 |
+
+*Modules 2–5 (regulation, operating architecture, execution model & partners, how we work) to follow. `ONBOARDING.md` at vault root remains the contributor walkthrough for the wiki itself.*
+
 ## Reference
 
 | Page | Summary | Updated |
@@ -173,7 +196,8 @@
 | cantus_primary_inputs_memo_02.docx | [[Strategy/Primary-Inputs-02-Energy-Execution]] | capital_partner |
 | cantus_primary_inputs_memo_03.docx | [[Strategy/Primary-Inputs-03-Labor-Community]] | capital_partner |
 | cii_iteration_document.docx | [[Products/CII-Iteration-Document]] | capital_partner |
+| Cantus-Integrated-Campus-Power-Program-2026-06-05.docx | [[Strategy/Cantus-Integrated-Campus-Power-Program]] | capital_partner |
 
 ---
 
-*To update: agents read this index first when answering queries, then drill into linked pages. Phase 4 migration completed 2026-05-04 — Strategy, Products, GTM, DealOS, Vision, Workshop, Reference, and Deliverables all populated from the prior unified vault.*
+*To update: agents read this index first when answering queries, then drill into linked pages. Phase 4 migration completed 2026-05-04 — Strategy, Products, GTM, DealOS, Vision, Workshop, Reference, and Deliverables all populated from the prior unified vault. Execution-model set ingested 2026-06-06 (Strategy execution subsection, first Partners page, Onboarding Module 1).*
